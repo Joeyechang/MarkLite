@@ -86,6 +86,7 @@
 "DontUpgrade"="Remind me later";
 
 "StartEdit"="Write something here";
+"SelectFileTips"="Select a file to edit";
 "Header"="Header";
 "Header1"="Header 1";
 "Header2"="Header 2";

@@ -221,11 +221,6 @@ extension File {
         }
     }
     
-    class func loadDropbox(_ completion: @escaping (File?)->Void) {
-        dropbox.loadFiles { (file) in
-            completion(file)
-        }
-    }
 }
 
 

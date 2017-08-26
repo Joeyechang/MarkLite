@@ -93,7 +93,15 @@ extension String {
 extension UIViewController {
     
     func checkVIP() -> Bool {
-        return true
+        if Configure.shared.isVip {
+            return true
+        }
+        showAlert(title: /"VIPOnly", message: nil, actionTitles: [/"Cancel",/"SubscribeNow"]) { (index) in
+            if index == 1 {
+                PurchaseView.showWithViewController(self)
+            }
+        }
+        return false
     }
     
     @discardableResult
@@ -181,6 +189,7 @@ extension UIView {
             bg.backgroundColor = UIColor.clear
         }
         let v = UIActivityIndicatorView(activityIndicatorStyle: Configure.shared.theme.value == .black ? .whiteLarge : .gray)
+        v.setColor(.primary)
         bg.addSubview(v)
         v.center = bg.center
         v.startAnimating()

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07C0D1DB1F50309000AB2CCE /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C0D1D91F50309000AB2CCE /* PurchaseView.swift */; };
+		07C0D1DC1F50309000AB2CCE /* PurchaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07C0D1DA1F50309000AB2CCE /* PurchaseView.xib */; };
 		07D068111F4FF5B200162B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D068101F4FF5B200162B7A /* AppDelegate.swift */; };
 		07D068181F4FF5B200162B7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07D068171F4FF5B200162B7A /* Assets.xcassets */; };
 		07D0681B1F4FF5B200162B7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D068191F4FF5B200162B7A /* LaunchScreen.storyboard */; };
@@ -34,7 +36,6 @@
 		07D069771F4FF85A00162B7A /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07D069291F4FF85A00162B7A /* Settings.storyboard */; };
 		07D069781F4FF85A00162B7A /* Configure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0692B1F4FF85A00162B7A /* Configure.swift */; };
 		07D069791F4FF85A00162B7A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0692C1F4FF85A00162B7A /* Constant.swift */; };
-		07D0697A1F4FF85A00162B7A /* DropboxHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0692D1F4FF85A00162B7A /* DropboxHelper.swift */; };
 		07D0697B1F4FF85A00162B7A /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0692E1F4FF85A00162B7A /* EventBus.swift */; };
 		07D0697C1F4FF85A00162B7A /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D0692F1F4FF85A00162B7A /* IAPHelper.swift */; };
 		07D0697D1F4FF85A00162B7A /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D069301F4FF85A00162B7A /* Localization.swift */; };
@@ -59,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		07713E171F4FFC5400CE7F44 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C0D1D91F50309000AB2CCE /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		07C0D1DA1F50309000AB2CCE /* PurchaseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseView.xib; sourceTree = "<group>"; };
 		07D0680D1F4FF5B200162B7A /* MarkLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D068101F4FF5B200162B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07D068171F4FF5B200162B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,7 +100,6 @@
 		07D069291F4FF85A00162B7A /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		07D0692B1F4FF85A00162B7A /* Configure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configure.swift; sourceTree = "<group>"; };
 		07D0692C1F4FF85A00162B7A /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		07D0692D1F4FF85A00162B7A /* DropboxHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropboxHelper.swift; sourceTree = "<group>"; };
 		07D0692E1F4FF85A00162B7A /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventBus.swift; sourceTree = "<group>"; };
 		07D0692F1F4FF85A00162B7A /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		07D069301F4FF85A00162B7A /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
@@ -249,7 +251,6 @@
 			children = (
 				07D0692B1F4FF85A00162B7A /* Configure.swift */,
 				07D0692C1F4FF85A00162B7A /* Constant.swift */,
-				07D0692D1F4FF85A00162B7A /* DropboxHelper.swift */,
 				07D0692E1F4FF85A00162B7A /* EventBus.swift */,
 				07D0692F1F4FF85A00162B7A /* IAPHelper.swift */,
 				07D069301F4FF85A00162B7A /* Localization.swift */,
@@ -266,6 +267,8 @@
 				07D069351F4FF85A00162B7A /* FileTableViewCell.swift */,
 				07D069361F4FF85A00162B7A /* ImagePicker.swift */,
 				07D069371F4FF85A00162B7A /* MenuView.swift */,
+				07C0D1D91F50309000AB2CCE /* PurchaseView.swift */,
+				07C0D1DA1F50309000AB2CCE /* PurchaseView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 			files = (
 				07D0681B1F4FF5B200162B7A /* LaunchScreen.storyboard in Resources */,
 				07D069771F4FF85A00162B7A /* Settings.storyboard in Resources */,
+				07C0D1DC1F50309000AB2CCE /* PurchaseView.xib in Resources */,
 				07D069931F4FFA0200162B7A /* Localizable.strings in Resources */,
 				07D069591F4FF85A00162B7A /* samples.zip in Resources */,
 				07D068181F4FF5B200162B7A /* Assets.xcassets in Resources */,
@@ -432,7 +436,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
 				"${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Zip/Zip.framework",
 			);
@@ -443,7 +446,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwipeCellKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Zip.framework",
 			);
@@ -498,8 +500,8 @@
 				07D069511F4FF85A00162B7A /* Theme.swift in Sources */,
 				07D069891F4FF85A00162B7A /* OptionsViewController.swift in Sources */,
 				07D069821F4FF85A00162B7A /* ImagePicker.swift in Sources */,
+				07C0D1DB1F50309000AB2CCE /* PurchaseView.swift in Sources */,
 				07D0698A1F4FF85A00162B7A /* SettingsViewController.swift in Sources */,
-				07D0697A1F4FF85A00162B7A /* DropboxHelper.swift in Sources */,
 				07D0698C1F4FF85A00162B7A /* WebViewController.swift in Sources */,
 				07D069441F4FF85A00162B7A /* autolink.c in Sources */,
 				07D069501F4FF85A00162B7A /* File.swift in Sources */,

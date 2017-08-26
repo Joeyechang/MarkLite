@@ -8,7 +8,6 @@
 
 import UIKit
 import SideMenu
-import SwiftyDropbox
 import RxSwift
 
 class SettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -24,22 +23,25 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     let assitBarSwitch = UISwitch(x: 0, y: 9, w: 60, h: 60)
     let autoClearSwitch = UISwitch(x: 0, y: 9, w: 60, h: 60)
     
-    let items = [
-        ("功能",[
-            ("AssistKeyboard","",#selector(assistBar)),
-            ("AutoClear","",#selector(autoClear)),
-            ]),
-        ("外观",[
-            ("NightMode","",#selector(night)),
-            ("Theme","",#selector(theme)),
-            ("Style","",#selector(style)),
-            ("CodeStyle","",#selector(codeStyle))
-            ]),
-        ("支持一下",[
-            ("RateIt","",#selector(rate)),
-            ("Feedback","",#selector(feedback))
-            ])
-    ]
+    var items: [(String,[(String,String,Selector)])] {
+        return [
+            ("功能",[
+                ("VIP",Configure.shared.isVip ? /"Subscribed" : /"SubscribeNow", #selector(purchase)),
+                ("AssistKeyboard","",#selector(assistBar)),
+                ("AutoClear","",#selector(autoClear)),
+                ]),
+            ("外观",[
+                ("NightMode","",#selector(night)),
+                ("Theme","",#selector(theme)),
+                ("Style","",#selector(style)),
+                ("CodeStyle","",#selector(codeStyle))
+                ]),
+            ("支持一下",[
+                ("RateIt","",#selector(rate)),
+                ("Feedback","",#selector(feedback))
+                ])
+        ]
+    }
     
     let disposeBag = DisposeBag()
     
@@ -194,4 +196,7 @@ extension SettingsViewController {
         pushVC(vc)
     }
 
+    func purchase() {
+        PurchaseView.showWithViewController(self)
+    }
 }

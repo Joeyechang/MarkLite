@@ -21,7 +21,10 @@ class Configure: NSObject, NSCoding {
     let isLandscape = Variable(false)
     
     var currentVerion: String?
+    var upgradeDate = Date()
+    var alertDate = Date()
     var isVip = false
+    var hasRate = false
     var isOldUser = false
     var isAutoClearEnabled = true
     let isAssistBarEnabled = Variable(true)
@@ -77,6 +80,7 @@ class Configure: NSObject, NSCoding {
     }
     
     func reset() {
+        upgradeDate = Date()
         currentVerion = appVersion
         
         let stylePath = Bundle.main.url(forResource: "style", withExtension: "zip")
@@ -97,6 +101,7 @@ class Configure: NSObject, NSCoding {
 
         currentVerion = appVersion
         isOldUser = true
+        upgradeDate = Date()
         save()
     }
     
@@ -108,18 +113,24 @@ class Configure: NSObject, NSCoding {
         aCoder.encode(currentVerion, forKey: "currentVersion")
         aCoder.encode(isOldUser, forKey: "isOldUser")
         aCoder.encode(isVip, forKey: "isVip")
+        aCoder.encode(hasRate, forKey: "hasRate")
         aCoder.encode(isAutoClearEnabled, forKey: "isAutoClearEnabled")
         aCoder.encode(isAssistBarEnabled.value, forKey: "isAssistBarEnabled")
         aCoder.encode(markdownStyle.value, forKey: "markdownStyle")
         aCoder.encode(highlightStyle.value, forKey: "highlightStyle")
         aCoder.encode(theme.value.rawValue, forKey: "theme")
+        aCoder.encode(upgradeDate, forKey: "upgradeDate")
+        aCoder.encode(alertDate, forKey: "alertDate")
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init()
         currentVerion = aDecoder.decodeObject(forKey: "currentVersion") as? String
+        upgradeDate = aDecoder.decodeObject(forKey: "upgradeDate") as? Date ?? Date()
+        alertDate = aDecoder.decodeObject(forKey: "alertDate") as? Date ?? Date()
         isOldUser = aDecoder.decodeBool(forKey: "isOldUser")
         isVip = aDecoder.decodeBool(forKey: "isVip")
+        hasRate = aDecoder.decodeBool(forKey: "hasRate")
         isAutoClearEnabled = aDecoder.decodeBool(forKey: "isAutoClearEnabled")
         isAssistBarEnabled.value = aDecoder.decodeBool(forKey: "isAssistBarEnabled")
         markdownStyle.value = aDecoder.decodeObject(forKey: "markdownStyle") as? String ?? "GitHub2"

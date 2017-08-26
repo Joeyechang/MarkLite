@@ -122,12 +122,38 @@ class FilesViewController: UIViewController {
             navigationController?.interactivePopGestureRecognizer?.delegate = navigationController
         }
         
+        if isHomePage {
+            let passedDay = Int(Date().timeIntervalSince(Configure.shared.alertDate) / (60 * 60 * 24))
+            if passedDay > 5 {
+                Timer.runThisAfterDelay(seconds: 1, after: {
+                    self.feedbackAlert()
+                })
+            }
+        }
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "nav_edit"), style: .plain, target: self, action: #selector(showCreateMenu))
         
         navBar?.setBarTintColor(.navBar)
         navBar?.setContentColor(.navBarTint)
         tableView.setBackgroundColor(.tableBackground)
         view.setBackgroundColor(.background)
+    }
+    
+    func feedbackAlert() {
+        if Configure.shared.hasRate {
+            return
+        }
+        showAlert(title: "抱歉打扰了", message: "你的反馈能帮助MarkLite做的更好，有什么要对开发者说的吗？", actionTitles: ["用着很好，好评鼓励","暂时没空","存在问题，提个意见"], actionHandler: { (index) in
+            if index == 0 {
+                UIApplication.shared.openURL(URL(string: rateUrl)!)
+                Configure.shared.hasRate = true
+            }
+            if index == 2 {
+                UIApplication.shared.openURL(URL(string: emailUrl)!)
+                Configure.shared.hasRate = true
+            }
+            Configure.shared.alertDate = Date()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {

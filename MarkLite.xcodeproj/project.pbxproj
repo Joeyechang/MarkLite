@@ -62,6 +62,7 @@
 		07713E171F4FFC5400CE7F44 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07C0D1D91F50309000AB2CCE /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		07C0D1DA1F50309000AB2CCE /* PurchaseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PurchaseView.xib; sourceTree = "<group>"; };
+		07C0D1DD1F51571500AB2CCE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		07D0680D1F4FF5B200162B7A /* MarkLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarkLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07D068101F4FF5B200162B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07D068171F4FF5B200162B7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -363,6 +364,7 @@
 				Base,
 				"zh-Hans",
 				"zh-Hant",
+				en,
 			);
 			mainGroup = 07D068041F4FF5B200162B7A;
 			productRefGroup = 07D0680E1F4FF5B200162B7A /* Products */;
@@ -535,6 +537,7 @@
 				07D069941F4FFA0200162B7A /* Base */,
 				07D069961F4FFA1A00162B7A /* zh-Hans */,
 				07D069971F4FFA2200162B7A /* zh-Hant */,
+				07C0D1DD1F51571500AB2CCE /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

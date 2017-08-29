@@ -52,6 +52,9 @@
 "MonthlyPrice"="¥6／月";
 "AnnualPrice"="¥58／年";
 "FreeTrial"="免費試用1周";
+"OldUserVIP"="我是老用户";
+"OldUserPrice"="¥1.99/月";
+"OldUserTips"="此版本之前的老用户可享受优惠";
 "SubsribeTips"="升級到高級帳戶後，你將獲得以下額外功能：\n1. 可導出所有格式(PDF,HTML,JPG)\n2. 可使用更多渲染樣式\n3. 可更改主題顔色\n4. 後續版本中添加的更多特性";
 "CancelSubsribeTips"="你隨時可以取消這些訂閱";
 "Restore"="恢複訂閱";

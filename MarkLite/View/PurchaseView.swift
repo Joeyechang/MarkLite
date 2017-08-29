@@ -21,10 +21,8 @@ class PurchaseView: UIView {
         let language = NSLocale.preferredLanguages.first ?? ""
 
         if language.hasPrefix("zh-Han") && Configure.shared.isOldUser {
-            oldUserView.isHidden = false
             premiumUserView.isHidden = false
         } else {
-            oldUserView.isHidden = true
             premiumUserView.isHidden = true
         }
     }

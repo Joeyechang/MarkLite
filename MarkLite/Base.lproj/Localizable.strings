@@ -48,13 +48,13 @@
 "CodeStyle"="Code block";
 
 "MonthlyVIP"="Monthly VIP";
-"AnnualVIP"="Annual VIP";
+"YearlyVIP"="Annual VIP";
 "MonthlyPrice"="$0.99";
 "AnnualPrice"="$8.49";
 "OldUserVIP"="VIP for old user";
 "OldUserPrice"="$0.49";
-"OldUserTips"="I have used this app for a while";
-"FreeTrial"="1 week free trial";
+"OldUserTips"="60% off for old user";
+"FreeTrial"="20% off,and 1 week free trial";
 "SubsribeTips"="Subscribe to MarkLite to support further development and gain access to some great extra features:\n 1. Application themes\n 2. Advanced exports to PDF,HTML,JPG\n 3. Markdown styles & code block styles";
 "CancelSubsribeTips"="All subscriptions can be canceled at any time.";
 "Restore"="Restore";

@@ -55,6 +55,10 @@
 		07D0698D1F4FF85A00162B7A /* WrapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D069421F4FF85A00162B7A /* WrapViewController.swift */; };
 		07D069901F4FF87700162B7A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D0698F1F4FF87700162B7A /* StoreKit.framework */; };
 		07D069931F4FFA0200162B7A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07D069951F4FFA0200162B7A /* Localizable.strings */; };
+		07E094E91F5BE427007FBDF3 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E094E81F5BE427007FBDF3 /* InfoViewController.swift */; };
+		07E094EE1F5BE8C7007FBDF3 /* monthly.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E094EB1F5BE8C7007FBDF3 /* monthly.html */; };
+		07E094EF1F5BE8C7007FBDF3 /* terms.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E094EC1F5BE8C7007FBDF3 /* terms.html */; };
+		07E094F01F5BE8C7007FBDF3 /* yearly.html in Resources */ = {isa = PBXBuildFile; fileRef = 07E094ED1F5BE8C7007FBDF3 /* yearly.html */; };
 		D2A742F006FCC3B2D2DB1F45 /* Pods_MarkLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D541B1BE4B465971E02EA78 /* Pods_MarkLite.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +127,10 @@
 		07D069941F4FFA0200162B7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		07D069961F4FFA1A00162B7A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		07D069971F4FFA2200162B7A /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		07E094E81F5BE427007FBDF3 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		07E094EB1F5BE8C7007FBDF3 /* monthly.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = monthly.html; sourceTree = "<group>"; };
+		07E094EC1F5BE8C7007FBDF3 /* terms.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = terms.html; sourceTree = "<group>"; };
+		07E094ED1F5BE8C7007FBDF3 /* yearly.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = yearly.html; sourceTree = "<group>"; };
 		300A7F0581104FC39B16A9C4 /* Pods-MarkLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkLite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarkLite/Pods-MarkLite.debug.xcconfig"; sourceTree = "<group>"; };
 		442E64FA070BD9D3CD556479 /* Pods-MarkLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarkLite.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarkLite/Pods-MarkLite.release.xcconfig"; sourceTree = "<group>"; };
 		4D541B1BE4B465971E02EA78 /* Pods_MarkLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarkLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +237,7 @@
 		07D068FA1F4FF85A00162B7A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				07E094EA1F5BE8C7007FBDF3 /* html */,
 				07D068FB1F4FF85A00162B7A /* icon.png */,
 				07D069061F4FF85A00162B7A /* samples.zip */,
 				07D069241F4FF85A00162B7A /* style.zip */,
@@ -285,8 +294,19 @@
 				07D069401F4FF85A00162B7A /* TextViewController.swift */,
 				07D069411F4FF85A00162B7A /* WebViewController.swift */,
 				07D069421F4FF85A00162B7A /* WrapViewController.swift */,
+				07E094E81F5BE427007FBDF3 /* InfoViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		07E094EA1F5BE8C7007FBDF3 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				07E094EB1F5BE8C7007FBDF3 /* monthly.html */,
+				07E094EC1F5BE8C7007FBDF3 /* terms.html */,
+				07E094ED1F5BE8C7007FBDF3 /* yearly.html */,
+			);
+			path = html;
 			sourceTree = "<group>";
 		};
 		7153AC0DBA1EFB0862457901 /* Frameworks */ = {
@@ -385,8 +405,11 @@
 				07D069771F4FF85A00162B7A /* Settings.storyboard in Resources */,
 				07C0D1DC1F50309000AB2CCE /* PurchaseView.xib in Resources */,
 				07D069931F4FFA0200162B7A /* Localizable.strings in Resources */,
+				07E094EF1F5BE8C7007FBDF3 /* terms.html in Resources */,
 				07D069591F4FF85A00162B7A /* samples.zip in Resources */,
 				07D068181F4FF5B200162B7A /* Assets.xcassets in Resources */,
+				07E094EE1F5BE8C7007FBDF3 /* monthly.html in Resources */,
+				07E094F01F5BE8C7007FBDF3 /* yearly.html in Resources */,
 				07D069521F4FF85A00162B7A /* icon.png in Resources */,
 				07D069751F4FF85A00162B7A /* Main_iPad.storyboard in Resources */,
 				07D069731F4FF85A00162B7A /* style.zip in Resources */,
@@ -503,6 +526,7 @@
 				07D069891F4FF85A00162B7A /* OptionsViewController.swift in Sources */,
 				07D069821F4FF85A00162B7A /* ImagePicker.swift in Sources */,
 				07C0D1DB1F50309000AB2CCE /* PurchaseView.swift in Sources */,
+				07E094E91F5BE427007FBDF3 /* InfoViewController.swift in Sources */,
 				07D0698A1F4FF85A00162B7A /* SettingsViewController.swift in Sources */,
 				07D0698C1F4FF85A00162B7A /* WebViewController.swift in Sources */,
 				07D069441F4FF85A00162B7A /* autolink.c in Sources */,

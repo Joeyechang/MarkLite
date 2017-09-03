@@ -12,18 +12,18 @@ class PurchaseView: UIView {
     
     weak var vc: UIViewController?
     
-    @IBOutlet weak var oldUserView: UIView!
-    @IBOutlet weak var premiumUserView: UIView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
         let language = NSLocale.preferredLanguages.first ?? ""
+        let date = Date(fromString: "2017-09-04", format: "yyyy-MM-dd")!
 
-        if language.hasPrefix("zh-Han") && Configure.shared.isOldUser {
-            premiumUserView.isHidden = false
+        if language == "zh-Hans-CN" {
+            premiumUserView.isHidden = Configure.shared.isOldUser.toggled
+            oldUserView.isHidden = (Configure.shared.isOldUser || date.isFuture).toggled
         } else {
             premiumUserView.isHidden = true
+            oldUserView.isHidden = true
         }
     }
     
@@ -31,17 +31,26 @@ class PurchaseView: UIView {
         purchaseProduct(monthlyVIPProductID)
     }
     
-    @IBAction func subscribeAnnualVIP(_ sender: UIButton) {
-        purchaseProduct(annualVIPProductID)
+    @IBAction func subscribeYearlyVIP(_ sender: UIButton) {
+        purchaseProduct(yearlyVIPProductID)
     }
     
-    @IBAction func oldUserVIP(_ sender: UIButton) {
-        purchaseProduct(oldUserVIPProductID)
+    @IBAction func showTermsInfo(_ sender: UIButton) {
+        let infoVC = InfoViewController()
+        infoVC.type = .terms
+        vc?.presentVC(infoVC)
     }
     
-    @IBAction func premiumUserVIP(_ sender: UIButton) {
-        Configure.shared.isVip = true
-        vc?.showAlert(title: "感谢你的支持，已经为你免费开通", message: "你将永久获得高级帐户，除非你卸载", actionTitles: ["知道了"])
+    @IBAction func showMonthlyInfo(_ sender: UIButton) {
+        let infoVC = InfoViewController()
+        infoVC.type = .monthly
+        vc?.presentVC(infoVC)
+    }
+    
+    @IBAction func showYearlyInfo(_ sender: UIButton) {
+        let infoVC = InfoViewController()
+        infoVC.type = .yearly
+        vc?.presentVC(infoVC)
     }
     
     @IBAction func restoreVIP(_ sender: UIButton) {

@@ -30,7 +30,7 @@
 
 "PDF"="PDF 文檔";
 "WebPage"="Web 頁面";
-"Image"="圖片";
+"Image"="長屏截圖";
 "Markdown"="Markdown";
 
 "VIP"="升級到高級帳戶";
@@ -48,13 +48,14 @@
 "Subscribed"="立即開通";
 
 "MonthlyVIP"="按月訂閱";
-"AnnualVIP"="按年訂閱";
-"MonthlyPrice"="¥6／月";
-"AnnualPrice"="¥58／年";
-"FreeTrial"="免費試用1周";
+"YearlyVIP"="按年訂閱";
+"MonthlyPrice"="$0.49";
+"AnnualPrice"="$8.49";
+"FreeTrial"="免費試用1周，享7.5折优惠";
+
 "OldUserVIP"="我是老用户";
-"OldUserPrice"="¥1.99/月";
-"OldUserTips"="此版本之前的老用户可享受优惠";
+"OldUserPrice"="$0.49";
+"OldUserTips"="之前版本的老用户可享优惠";
 "SubsribeTips"="升級到高級帳戶後，你將獲得以下額外功能：\n1. 可導出所有格式(PDF,HTML,JPG)\n2. 可使用更多渲染樣式\n3. 可更改主題顔色\n4. 後續版本中添加的更多特性";
 "CancelSubsribeTips"="你隨時可以取消這些訂閱";
 "Restore"="恢複訂閱";

@@ -24,6 +24,7 @@ class Configure: NSObject, NSCoding {
     var upgradeDate = Date()
     var alertDate = Date()
     var isVip = false
+    var isFreeVip = false
     var hasRate = false
     var isOldUser = false
     var isAutoClearEnabled = true
@@ -69,7 +70,7 @@ class Configure: NSObject, NSCoding {
                 return
             }
             print("products: \(products)")
-            let vipIdentifier = [monthlyVIPProductID,annualVIPProductID,oldUserVIPProductID]
+            let vipIdentifier = [monthlyVIPProductID,yearlyVIPProductID]
             let expiredDate = vipIdentifier.map{ products[$0] ?? Date(timeIntervalSince1970: 0) }.max() ?? Date(timeIntervalSince1970: 0)
 
             self.isVip = expiredDate.isFuture
@@ -113,6 +114,7 @@ class Configure: NSObject, NSCoding {
         aCoder.encode(currentVerion, forKey: "currentVersion")
         aCoder.encode(isOldUser, forKey: "isOldUser")
         aCoder.encode(isVip, forKey: "isVip")
+        aCoder.encode(isFreeVip, forKey: "isFreeVip")
         aCoder.encode(hasRate, forKey: "hasRate")
         aCoder.encode(isAutoClearEnabled, forKey: "isAutoClearEnabled")
         aCoder.encode(isAssistBarEnabled.value, forKey: "isAssistBarEnabled")
@@ -130,6 +132,7 @@ class Configure: NSObject, NSCoding {
         alertDate = aDecoder.decodeObject(forKey: "alertDate") as? Date ?? Date()
         isOldUser = aDecoder.decodeBool(forKey: "isOldUser")
         isVip = aDecoder.decodeBool(forKey: "isVip")
+        isFreeVip = aDecoder.decodeBool(forKey: "isFreeVip")
         hasRate = aDecoder.decodeBool(forKey: "hasRate")
         isAutoClearEnabled = aDecoder.decodeBool(forKey: "isAutoClearEnabled")
         isAssistBarEnabled.value = aDecoder.decodeBool(forKey: "isAssistBarEnabled")

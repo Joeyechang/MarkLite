@@ -24,9 +24,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     let autoClearSwitch = UISwitch(x: 0, y: 9, w: 60, h: 60)
     
     var items: [(String,[(String,String,Selector)])] {
+        let vip = Configure.shared.isVip || Configure.shared.isFreeVip
         return [
             ("功能",[
-                ("VIP",Configure.shared.isVip ? /"Subscribed" : /"SubscribeNow", #selector(purchase)),
+                ("VIP",vip ? /"Subscribed" : /"SubscribeNow", #selector(purchase)),
                 ("AssistKeyboard","",#selector(assistBar)),
                 ("AutoClear","",#selector(autoClear)),
                 ]),
@@ -140,9 +141,7 @@ extension SettingsViewController {
     }
     
     func night(_ sender: UISwitch) {
-        if checkVIP() {
-            Configure.shared.theme.value = sender.isOn ? .black : .white
-        }
+        Configure.shared.theme.value = sender.isOn ? .black : .white
     }
     
     func assistBar(_ sender: UISwitch) {

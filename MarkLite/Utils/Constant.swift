@@ -17,10 +17,8 @@ let upgradeUrl = "itms-apps://itunes.apple.com/app/id1098107145"
 let checkVersionUrl = "http://itunes.apple.com/lookup?id=1098107145"
 let emailUrl = "mailto:cheng4741@gmail.com?subject=MarkLite%20Report&body="
 
-let donateProductID = "com.zhubch.MarkLite.Donate"
-let monthlyVIPProductID = "com.zhubch.MarkLite.monthly.VIP"
-let annualVIPProductID = "com.zhubch.MarkLite.annual.vip"
-let oldUserVIPProductID = "com.zhubch.MarkLite.oldUser.vip"
+let monthlyVIPProductID = "com.zhubch.marklite.vip.monthly"
+let yearlyVIPProductID = "com.zhubch.marklite.vip.yearly"
 let itunsSecretKey = "65fe2236d748492f94b0b6fca964be58"
 
 let imageUploadUrl = "https://sm.ms/api/upload"

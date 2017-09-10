@@ -15,16 +15,16 @@ class PurchaseView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let language = NSLocale.preferredLanguages.first ?? ""
-        let date = Date(fromString: "2017-09-04", format: "yyyy-MM-dd")!
-
-        if language == "zh-Hans-CN" {
-            premiumUserView.isHidden = Configure.shared.isOldUser.toggled
-            oldUserView.isHidden = (Configure.shared.isOldUser || date.isFuture).toggled
-        } else {
-            premiumUserView.isHidden = true
-            oldUserView.isHidden = true
-        }
+//        let language = NSLocale.preferredLanguages.first ?? ""
+//        let date = Date(fromString: "2017-09-04", format: "yyyy-MM-dd")!
+//
+//        if language == "zh-Hans-CN" {
+//            premiumUserView.isHidden = Configure.shared.isOldUser.toggled
+//            oldUserView.isHidden = (Configure.shared.isOldUser || date.isFuture).toggled
+//        } else {
+//            premiumUserView.isHidden = true
+//            oldUserView.isHidden = true
+//        }
     }
     
     @IBAction func subscribeMonthlyVIP(_ sender: UIButton) {
@@ -38,19 +38,33 @@ class PurchaseView: UIView {
     @IBAction func showTermsInfo(_ sender: UIButton) {
         let infoVC = InfoViewController()
         infoVC.type = .terms
-        vc?.presentVC(infoVC)
+        let nav = UINavigationController(rootViewController: infoVC)
+        nav.modalPresentationStyle = .formSheet
+        vc?.presentVC(nav)
+    }
+    
+    @IBAction func showPrivacyInfo(_ sender: UIButton) {
+        let infoVC = InfoViewController()
+        infoVC.type = .privacy
+        let nav = UINavigationController(rootViewController: infoVC)
+        nav.modalPresentationStyle = .formSheet
+        vc?.presentVC(nav)
     }
     
     @IBAction func showMonthlyInfo(_ sender: UIButton) {
         let infoVC = InfoViewController()
         infoVC.type = .monthly
-        vc?.presentVC(infoVC)
+        let nav = UINavigationController(rootViewController: infoVC)
+        nav.modalPresentationStyle = .formSheet
+        vc?.presentVC(nav)
     }
     
     @IBAction func showYearlyInfo(_ sender: UIButton) {
         let infoVC = InfoViewController()
         infoVC.type = .yearly
-        vc?.presentVC(infoVC)
+        let nav = UINavigationController(rootViewController: infoVC)
+        nav.modalPresentationStyle = .formSheet
+        vc?.presentVC(nav)
     }
     
     @IBAction func restoreVIP(_ sender: UIButton) {

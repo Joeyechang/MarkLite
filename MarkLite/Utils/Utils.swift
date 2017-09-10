@@ -93,7 +93,7 @@ extension String {
 extension UIViewController {
     
     func checkVIP() -> Bool {
-        if Configure.shared.isVip || Configure.shared.isFreeVip {
+        if Configure.shared.isVip {
             return true
         }
         showAlert(title: /"VIPOnly", message: nil, actionTitles: [/"Cancel",/"SubscribeNow"]) { (index) in
@@ -330,7 +330,8 @@ extension UIScrollView {
         }
         
         contentOffset = CGPoint(x: 0, y: 0)
-        frame = CGRect(origin: CGPoint(x: 0, y: 0), size: contentSize)
+        let size = CGSize(width: contentSize.width, height: contentSize.height)
+        frame = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
         layer.render(in: ctx)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         

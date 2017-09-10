@@ -12,6 +12,20 @@ enum InfoType:String {
     case monthly
     case yearly
     case terms
+    case privacy
+    
+    var title: String {
+        switch self {
+        case .monthly:
+            return /"MonthlyVIP"
+        case .yearly:
+            return /"YearlyVIP"
+        case .terms:
+            return /"Terms"
+        case .privacy:
+            return /"PrivacyPolicy"
+        }
+    }
 }
 
 class InfoViewController: UIViewController {
@@ -29,6 +43,13 @@ class InfoViewController: UIViewController {
         let request = URLRequest(url: url)
         webView.loadRequest(request)
         view.addSubview(webView)
+        
+        self.title = type.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: /"Close", style: .done, target: self, action: #selector(close))
+    }
+    
+    func close() {
+        navigationController?.dismissVC(completion: nil)
     }
 
     override func viewDidLayoutSubviews() {

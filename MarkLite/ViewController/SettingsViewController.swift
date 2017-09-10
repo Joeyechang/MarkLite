@@ -24,10 +24,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     let autoClearSwitch = UISwitch(x: 0, y: 9, w: 60, h: 60)
     
     var items: [(String,[(String,String,Selector)])] {
-        let vip = Configure.shared.isVip || Configure.shared.isFreeVip
+        let vip = Configure.shared.isVip
         return [
             ("功能",[
-                ("VIP",vip ? /"Subscribed" : /"SubscribeNow", #selector(purchase)),
+                ("Premium",vip ? /"Subscribed" : /"SubscribeNow", #selector(purchase)),
                 ("AssistKeyboard","",#selector(assistBar)),
                 ("AutoClear","",#selector(autoClear)),
                 ]),
@@ -49,6 +49,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        preferredContentSize = CGSize(width: 320, height: 500)
         self.title = /"Settings"
         navBar?.setBarTintColor(.navBar)
         navBar?.setContentColor(.navBarTint)
